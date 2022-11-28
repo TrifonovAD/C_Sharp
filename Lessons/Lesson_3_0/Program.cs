@@ -15,4 +15,4 @@ void Quarters(int x, int y)
         Console.WriteLine("IV");
 }
 
-Quarters(10, -9);
+Quarters(0, 0);
