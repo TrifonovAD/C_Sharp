@@ -92,32 +92,106 @@
 
 // Ясна ли задача?
 
-string Replace (string text, char oldValue, char newValue)
-{
-    string result = string.Empty;
-    int length = text.Length;
+// string Replace (string text, char oldValue, char newValue)
+// {
+//     string result = string.Empty;
+//     int length = text.Length;
 
-    for (int i = 0; i < length; i++)
+//     for (int i = 0; i < length; i++)
+//     {
+//         if (text[i] == oldValue) result = result + $"{newValue}";
+//         else result = result + $"{text[i]}";
+//     }
+//     return result;
+// }
+
+// string text = "— Я думаю, — сказал князь, улыбаясь, — что, "
+//               + "ежели бы вас послали вместо нашего милого "
+//               + "Винценгероде, вы бы взяли приступом согласие "
+//               + "прусского короля. Вы так красноречивы. Вы дадите мне чаю?";
+
+// string newText = Replace(text, ' ', '|');
+// Console.WriteLine(newText);
+
+// Console.WriteLine();
+
+// newText = Replace(newText, 'к', 'К');
+// Console.WriteLine(newText);
+
+// Console.WriteLine();
+// newText = Replace(newText, 'С', 'с');
+// Console.WriteLine(newText);
+
+
+// Сортировка массива от минимального к максимальному
+
+
+// int[] array = { 1, 6, 2, 8, 4, 6, 4, 5, 3, 1 };
+
+// void PrintArray (int[] arr)
+// {
+//     int count = arr.Length;
+//     for (int i = 0; i<count; i++)
+//     {
+//         Console.Write ($"{arr[i]} ");
+//     }
+//     Console.WriteLine();
+// }
+
+// void SortArray (int [] array)
+// {
+//     for (int i = 0; i < array.Length - 1; i++)
+//     {
+//         int minPosition = i;
+
+//         for (int j = i + 1; j < array.Length; j++)
+//         {
+//             if (array[j] < array[minPosition]) minPosition = j;
+//         }
+
+
+//         int temporary = array[i];
+//         array[i] = array[minPosition];
+//         array[minPosition] = temporary;
+//     }
+// }
+
+// PrintArray (array);
+// SortArray (array);
+// PrintArray (array);
+
+// Сортировка массива от максимального к минимальному
+
+int[] array = { 1, 6, 2, 8, 4, 6, 4, 5, 3, 1 };
+
+void PrintArray (int[] arr)
+{
+    int count = arr.Length;
+    for (int i = 0; i<count; i++)
     {
-        if (text[i] == oldValue) result = result + $"{newValue}";
-        else result = result + $"{text[i]}";
+        Console.Write ($"{arr[i]} ");
     }
-    return result;
+    Console.WriteLine();
 }
 
-string text = "— Я думаю, — сказал князь, улыбаясь, — что, "
-              + "ежели бы вас послали вместо нашего милого "
-              + "Винценгероде, вы бы взяли приступом согласие "
-              + "прусского короля. Вы так красноречивы. Вы дадите мне чаю?";
+void SortArray (int [] array)
+{
+    for (int i = 0; i < array.Length - 1; i++)
+    {
+        int maxPosition = i;
 
-string newText = Replace(text, ' ', '|');
-Console.WriteLine(newText);
+        for (int j = i + 1; j < array.Length; j++)
+        {
+            if (array[j] > array[maxPosition]) maxPosition = j;
+        }
 
-Console.WriteLine();
 
-newText = Replace(newText, 'к', 'К');
-Console.WriteLine(newText);
+        int temporary = array[i];
+        array[i] = array[maxPosition];
+        array[maxPosition] = temporary;
+    }
+}
 
-Console.WriteLine();
-newText = Replace(newText, 'С', 'с');
-Console.WriteLine(newText);
+PrintArray (array);
+SortArray (array);
+PrintArray (array);
