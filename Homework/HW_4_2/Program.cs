@@ -13,4 +13,4 @@ int SumDigit(int number)
 }
 
 int num = int.Parse(Console.ReadLine());
-Console.WriteLine ($"{num} -> {SumDigit(num)}");
+Console.WriteLine($"{num} -> {SumDigit(num)}");
