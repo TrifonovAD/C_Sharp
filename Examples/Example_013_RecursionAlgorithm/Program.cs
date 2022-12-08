@@ -41,5 +41,6 @@ PrintArray(matrix);
 FillArray(matrix);
 Console.WriteLine();
 PrintArray(matrix);
+PrintArray(matrix);
 
 
